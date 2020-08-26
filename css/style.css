@@ -6,7 +6,7 @@ html{
 }
 
 body{
-    font-family: 'Lato', "Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro", "游ゴシック","YuGothic","ＭＳ ゴシック",sans-serif;
+    font-family:  "Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro", "游ゴシック","YuGothic","ＭＳ ゴシック",sans-serif;
     color: #432;
 }
 img{
@@ -94,7 +94,8 @@ a.main-nav-list{
 .works-list{
   display: grid;
   gap: 26px;
-  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
   margin-top: 6%;
   margin-bottom: 50px;
 }
@@ -104,6 +105,7 @@ a.main-nav-list{
    display: grid;
     gap: 26px;
     grid-template-columns: 2fr 1fr;
+
     grid-template-rows: 1fr ;
     padding:10% 20% 10% 20%;
 }
@@ -292,7 +294,9 @@ footer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap:20px;
-    padding: 5rem 15rem;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 10%;
 }
 .pr1{
     background-color: #D4E4F8;
@@ -312,4 +316,120 @@ footer{
 }
 .pr span ,.about-sentence span {
     font-weight: bold;
+}
+
+
+/* モバイル版 */
+@media (max-width: 600px){
+    body{
+        font-size: 3.5vw;
+    }
+    .page-title{
+         font-size :2.5rem;
+    }
+
+.works-listbanner{
+    grid-column: auto;
+    grid-row: auto;
+}
+
+.about-item{
+     display: block;
+     padding: 0px;
+     margin: 10px;
+}
+.about-image-wrapper{
+    width: 100px;
+    max-width: 100%;
+    margin: 0 auto 20px;
+}
+
+li {
+    float: none;
+    display: block;
+
+}
+
+.skills-content ol li{
+    padding-left: 35px;
+}
+
+.works-item1-2{
+    padding: 0px;
+}
+
+.works-item3{
+    padding: 10%;
+}
+
+
+.works-listbanner{
+    display: block;
+    padding: 1rem;
+}
+
+.about-sentence {
+    margin-bottom: 30px;
+}
+.heading-primary{
+    margin-top: 50px;
+}
+
+#header h1{
+position: static;
+}
+#header{
+    display: flex;
+    padding: 10px;
+
+}
+.top{
+    padding: 50px 50px;
+}
+.logo{
+    margin: 0.3rem;
+    min-width: 20px;
+
+}
+
+/* ここからWORKSWEB用 */
+.works-sentence{
+    display: block;
+}
+
+.works-image{
+    margin-bottom: 5%;
+}
+
+.sentence p{
+    float: none;
+    width: auto;
+}
+.works-page-content p{
+    margin-top: 5%;
+}
+
+/* ここからABOUT用 */
+.pr{
+    display: block;
+    padding: 5px 5px;
+    width: 80%;
+    margin: 0 auto;
+}
+.about-sentence{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.pr1,.pr2,.pr3 {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
 }
