@@ -2,7 +2,7 @@
 
 /*共通部分*/
 html{
-    font-size; 100%;
+    font-size: 100%;
 }
 
 body{
@@ -94,14 +94,13 @@ a.main-nav-list{
 .works-list{
   display: grid;
   gap: 26px;
-  /* grid-template-columns: 1fr 1fr 1fr; */
   grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
   margin-top: 6%;
   margin-bottom: 50px;
 }
 
 /*worksバナー-------------*/
-.works-listbanner{
+.works-list-banner{
    display: grid;
     gap: 26px;
     grid-template-columns: 2fr 1fr;
@@ -125,7 +124,7 @@ a.main-nav-list{
    grid-row:1/3;
    grid-column: 2/3;
 }
-.detal-button{
+.detail-button{
     text-align: right;
     width: 100%;
     display: flex;
@@ -144,7 +143,7 @@ a.main-nav-list{
     letter-spacing: 0.5em;
     border: 1px solid #000;
 }
-.detal-button a:hover{
+.detail-button a:hover{
     color: #f39ac7;
     border: 1px solid #f39ac7;
 }
@@ -268,6 +267,11 @@ footer{
 .works-image img {
     border: solid 1px #432;
 }
+.pairmoney-img img{
+    border:none;
+}
+
+
 .works-sentence {
     display: inline-block;
     display: flex;
@@ -287,7 +291,6 @@ footer{
 
 /* aboutここから */
 .about-image{
-    float: center;
     width: 200px;
 }
 .pr{
@@ -320,15 +323,15 @@ footer{
 
 
 /* モバイル版 */
-@media (max-width: 600px){
+@media (max-width: 800px){
     body{
-        font-size: 3.5vw;
+        font-size: 2.5vw;
     }
     .page-title{
          font-size :2.5rem;
     }
 
-.works-listbanner{
+.works-list-banner{
     grid-column: auto;
     grid-row: auto;
 }
@@ -347,7 +350,6 @@ footer{
 li {
     float: none;
     display: block;
-
 }
 
 .skills-content ol li{
@@ -362,8 +364,7 @@ li {
     padding: 10%;
 }
 
-
-.works-listbanner{
+.works-list-banner{
     display: block;
     padding: 1rem;
 }
@@ -375,21 +376,25 @@ li {
     margin-top: 50px;
 }
 
-#header h1{
-position: static;
-}
 #header{
-    display: flex;
     padding: 10px;
+}
 
+.main-nav{
+    font-family: serif;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin-top: 0.5rem;
 }
 .top{
     padding: 50px 50px;
 }
-.logo{
-    margin: 0.3rem;
-    min-width: 20px;
 
+.logo{
+    width: 50px;
+    margin: 0.5rem;
+    display: block;
 }
 
 /* ここからWORKSWEB用 */
@@ -426,10 +431,4 @@ position: static;
     margin: 0 auto;
     margin-bottom: 20px;
 }
-
-
-
-
-
-
 }
